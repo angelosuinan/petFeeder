@@ -29,6 +29,9 @@
     {% block content %}
     {% endblock content %}
     {% block footer %}
+        <a  href="{% url 'override:index' %}"   <p>FORCE FEED</p>
+            <a href="{% url 'logs:index' %}" >
+                  LOGS</a>
     {% endblock footer %}
 
     {% block scripts %}
