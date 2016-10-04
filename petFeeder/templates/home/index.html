@@ -38,7 +38,10 @@ onstart()
 {% block content %}
 <div id="picture">
 <img id="myImage" src="{% static "images/no.jpg" %}">
-<p id = "feed"></p>
-<input type="button" id="button" value="Feed ME"/>
+<form action="{% url 'home:index' %}" method="post">
+    {% csrf_token %}
+    <p id = "feed"></p>
+    <input class = "btn" type="submit" id="button" value="Feed ME"/>
+</form>
 </div>
 {% endblock content %}

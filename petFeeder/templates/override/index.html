@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 <div id="over">
-    <p id="text1">ARE YOU SURE YOU WANT TO</p>
-<input type="button" id="button" value="RAGE FEED"/>
-<p id = "text2">OR</p>
-<input type="button" id="button" value="GO BACK"/>
+    <p id="text2">ARE YOU SURE YOU WANT TO</p>
+<form action"{% url 'home:index' %}" method="post">
+    {% csrf_token %}
+<input class="btn" type="submit" id="button" value="RAGE FEED"/>
+</form>
+<p id = "text1">OR</p>
+<input class="btn" type="button" id="button" value="GO BACK"/>
 </div>
 
 {% endblock content %}
