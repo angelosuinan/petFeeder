@@ -16,6 +16,8 @@ class a():
             with open ("assets/feed.txt", 'w+') as f:
                 f.write("0")
     def rage_feed(self):
-        print ("assas")
+        led = LED(4)
+        led.off()
+        sleep(2)
         q = Date(feed="True", pub_date=timezone.now())
         q.save()

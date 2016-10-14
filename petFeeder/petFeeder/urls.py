@@ -18,6 +18,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^live$', include('live.urls' , namespace='live')),
      url(r'^$', include('home.urls', namespace='home')),
       url(r'^logs$', include('logs.urls', namespace='logs')),
        url(r'^override$', include('override.urls', namespace='override')),

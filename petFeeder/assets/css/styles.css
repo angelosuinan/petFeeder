@@ -1,5 +1,17 @@
+#bun {
+        background-color: Transparent;
+            background-repeat:no-repeat;
+                border: none;
+                    cursor:pointer;
+                        overflow: hidden;
+                            outline:none;
+        position: absolute; visibility: visible; left: 360px; top: 315px; height: 100px; width: 150px; z-index: 200;
+                        }
+#bod {
+width: 50%;
+     margin: 0 auto;}
 .btn {
-    `background: #3498db;
+background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
   background-image: -moz-linear-gradient(top, #3498db, #2980b9);
   background-image: -ms-linear-gradient(top, #3498db, #2980b9);
@@ -54,6 +66,7 @@
                                                 font-weight: bold;
                                                     text-align: center;
                                                     }
-#locator1 { position: absolute; visibility: visible; left: 360px; top: 615px; height: 100px; width: 150px; z-index: 200; }
+#locator1 { position: absolute; visibility: visible; left: 450px; top: 315px; height: 100px; width: 150px; z-index: 200; }
 
-#locator2 { position: absolute; visibility: visible; left: 30px; top: 650px; height: 100px; width: 150px; z-    +++index: 200; }
+#locator2 { position: absolute; visibility: visible; left: 130px; top: 450px; height: 100px; width: 150px; z-    +++index: 200; }
+#locator3 { position: absolute; visibility: visible; left: 280px; top: 615px; height: 100px; width: 150px; z-    +++index: 200; }

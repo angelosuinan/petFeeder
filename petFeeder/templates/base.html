@@ -26,18 +26,13 @@
 <body>
     {% block header %}
     {% endblock header %}
+    <div id ="bod">
     {% block content %}
     {% endblock content %}
     {% block footer %}
-    <div id = "locator2">
-    <a  href="{% url 'override:index' %}"   <p id="text1">FORCE FEED</p>
-    </div>
-    <div id = "locator1">
-        <a href="{% url 'logs:index' %}" ><p id= "text2">
-                LOGS</p></a>
-    </div>
-    {% endblock footer %}
 
+    {% endblock footer %}
+    </div>
     {% block scripts %}
 
     {% endblock scripts %}

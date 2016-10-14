@@ -29,19 +29,35 @@ function loadDoc() {
     xhttp.send();
 
                            }
-window.onload=function(){
-      document.getElementById("button").style.display='none';
-onstart()
+//window.onload=function(){
+  //    document.getElementById("button").style.display='none';
+//onstart()
 }
 </script>
 {% endblock custom_scripts %}
 {% block content %}
-<div id="picture">
-<img id="myImage" src="{% static "images/no.jpg" %}">
-<form action="{% url 'home:index' %}" method="post">
+
+    <div id = "locator2">
+        <a  href="http://192.168.2.133:8081" ><p id="text1">LIVE STREAM</p></a>
+                </div>
+<form action="{% url 'home:index' %}" method="POST">
+    {{ form1.as_p }}
     {% csrf_token %}
-    <p id = "feed"></p>
-    <input class = "btn" type="submit" id="button" value="Feed ME"/>
+    <button  id="bun" name="feed" ><p id="text1">FEED</p></button>
 </form>
+<div id = "locator1">
+<a  href="{% url 'logs:index' %}" ><p id="text1">LOGS</p></a>
 </div>
+
+<div id ="locator3">
+    <form action="{% url 'home:index' %}" method="post">
+        {{form2.as_p}}
+        {% csrf_token %}
+            <input type="time" name="time1" id="time1">
+            <input type="time" name="time2" id="time2">
+            <input type="time" name="time3" id="time3">
+            <input type="submit" name="time">
+    </form>
+</div>
+
 {% endblock content %}

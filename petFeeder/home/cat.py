@@ -22,25 +22,24 @@ class Cam(object):
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             faces = faceCascade.detectMultiScale(
                 gray,
-            scaleFactor=1.3,
-            minNeighbors=10,
-            minSize=(75, 75),
+            scaleFactor=1.5,
+            minNeighbors=13,
+            minSize=(50, 50),
             flags=cv2.CASCADE_SCALE_IMAGE
             )
+            # Draw a rectangle around the faces¬
+           # for (x, y, w, h) in faces:¬
+          #      cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)¬
             if len(faces) > 0:
-                import pdb
-                pdb.set_trace()
+                print("FOUND IT")
                 with open('assets/feed.txt', 'w+') as f:
                     f.write("1")
-                sleep(60)
+                sleep(20)
                 with open('assets/feed.txt', 'w+') as f:
                     f.write("0")
-            # Draw a rectangle around the faces
-            for (x, y, w, h) in faces:
-               cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-
+            cv2.imwrite("assets/images/live.jpg", frame )
             # Display the resulting frame
-            cv2.imshow('Video', frame)
+          #  cv2.imshow('Video', frame)
             print ("Found " + str(len(faces)) + " cat face/s")
         # When everything is done, release the capture
         video_capture.release()
