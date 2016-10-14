@@ -53,10 +53,14 @@ function loadDoc() {
     <form action="{% url 'home:index' %}" method="post">
         {{form2.as_p}}
         {% csrf_token %}
+        {% for time in time_list %}
+        {{ time}}
+        {{ break }}
+        {% endfor %}
             <input type="time" name="time1" id="time1">
             <input type="time" name="time2" id="time2">
-            <input type="time" name="time3" id="time3">
-            <input type="submit" name="time">
+            <input type="time" name="time3" id="time3"><br>
+            <a href = "{% url 'home:index' %}" ><input type="submit" name="time"></a>
     </form>
 </div>
 
